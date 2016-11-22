@@ -38,13 +38,13 @@ var map = new google.maps.Map(document.getElementById('map'), { zoom: 4, center:
 
 var Mad_content='Battle of Bots' ;
 var Che_content='Battle of Bots' ;
-var Coi_content='Battle of Bots'+'Map your location' ;
+var Coi_content="<ul style='list-style-type:circle'><li>Battle of Bots</li><li>Map your location </li></ul>";
 var Tiru_content='Battle of Bots' ;
 var Trichy_content='Battle of Bots' ;
 var Sur_content='Battle of Bots' ;
 var Pila_content='Battle of Bots' ;
-var Vell_content='Battle of Bots'+'Robotics Workshop' ;
-var salem_content='Augmented and Virtual Reality'+' Tweet it like twitter' ;
+var Vell_content="<ul style='list-style-type:circle'><li>Battle of Bots</li><li>Robotics Workshop </li></ul>";
+var salem_content="<ul style='list-style-type:disc'><li>Augmented and Virtual Reality</li><li>Tweet it like twitter </li></ul>";
 
 var infowindow0 = new google.maps.InfoWindow({ content: Mad_content });
 var infowindow1 = new google.maps.InfoWindow({ content: Che_content });
@@ -66,6 +66,7 @@ var marker6 = new google.maps.Marker({ position: Suratkal ,map: map ,title:'NIT 
 var marker7 = new google.maps.Marker({ position: Pilani ,map: map ,title:'BITS Pilani'}); 
 var marker8 = new google.maps.Marker({ position: Chennai ,map: map ,title:'Easwari Engineering College,Chennai'});
 marker0.addListener('click', function() { infowindow0.open(map, marker0); });
+
 marker1.addListener('click', function() { infowindow2.open(map, marker1); });
 marker2.addListener('click', function() { infowindow3.open(map, marker2); });
 marker3.addListener('click', function() { infowindow7.open(map, marker3); });
