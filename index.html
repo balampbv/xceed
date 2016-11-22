@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+<h3>Learn About Exceed</h3>
+<div id="map"></div>
+
+<script>
+var map;
+function initMap() { 
+var Chennai = {lat: 13.082680, lng:80.270718}; 
+var Madurai = {lat: 9.886596, lng:78.074523}; 
+var Coimbatore = {lat: 11.112592, lng:77.035749}; 
+var Tirupati = {lat: 13.628756, lng: 79.419179}; 
+var Vellore = {lat:12.968076, lng:79.148261}; 
+var Salem = {lat:11.664325, lng: 78.146014}; 
+var Trichy = {lat: 10.790483, lng: 78.704673}; 
+var Suratkal = {lat: 22.255730, lng: 84.904721}; 
+var Pilani = {lat: 28.358016, lng:75.588799};
+var map = new google.maps.Map(document.getElementById('map'), { zoom: 4, center:Madurai});
+
+var Mad_content='Battle of Bots' ;
+var Che_content='Battle of Bots' ;
+var Coi_content='Battle of Bots'+'Map your location' ;
+var Tiru_content='Battle of Bots' ;
+var Trichy_content='Battle of Bots' ;
+var Sur_content='Battle of Bots' ;
+var Pila_content='Battle of Bots' ;
+var Vell_content='Battle of Bots'+'Robotics Workshop' ;
+var salem_content='Augmented and Virtual Reality'+' Tweet it like twitter' ;
+
+var infowindow0 = new google.maps.InfoWindow({ content: Mad_content });
+var infowindow1 = new google.maps.InfoWindow({ content: Che_content });
+var infowindow2 = new google.maps.InfoWindow({ content: Coi_content });
+var infowindow3 = new google.maps.InfoWindow({ content: Tiru_content });
+var infowindow4 = new google.maps.InfoWindow({ content: Trichy_content });
+var infowindow5 = new google.maps.InfoWindow({ content: Sur_content });
+var infowindow6 = new google.maps.InfoWindow({ content: Pila_content });
+var infowindow7 = new google.maps.InfoWindow({ content: Vell_content });
+var infowindow8 = new google.maps.InfoWindow({ content: salem_content });
+  
+var marker0 = new google.maps.Marker({ position: Madurai ,map: map,title:'Thiagarajar College of Engineering,Madurai' }); 
+var marker1 = new google.maps.Marker({ position: Coimbatore ,map: map,title:'Coimbatore institute of technology' });
+var marker2 = new google.maps.Marker({ position: Tirupati ,map: map,title:'IIT Tirupathi'}); 
+var marker3 = new google.maps.Marker({ position: Vellore, map: map,title:'Vellore Institute of Technology,Vellore' }); 
+var marker4 = new google.maps.Marker({ position: Salem ,map: map ,title:'Annapoorana Engineering College,Salem'}); 
+var marker5 = new google.maps.Marker({ position: Trichy ,map: map ,title:'Trichy'}); 
+var marker6 = new google.maps.Marker({ position: Suratkal ,map: map ,title:'NIT Suratkal'}); 
+var marker7 = new google.maps.Marker({ position: Pilani ,map: map ,title:'BITS Pilani'}); 
+var marker8 = new google.maps.Marker({ position: Chennai ,map: map ,title:'Easwari Engineering College,Chennai'});
+marker0.addListener('click', function() { infowindow0.open(map, marker0); });
+marker1.addListener('click', function() { infowindow2.open(map, marker1); });
+marker2.addListener('click', function() { infowindow3.open(map, marker2); });
+marker3.addListener('click', function() { infowindow7.open(map, marker3); });
+marker4.addListener('click', function() { infowindow8.open(map, marker4); });
+marker5.addListener('click', function() { infowindow4.open(map, marker5); });
+marker6.addListener('click', function() { infowindow5.open(map, marker6); });
+marker7.addListener('click', function() { infowindow6.open(map, marker7); });
+marker8.addListener('click', function() { infowindow1.open(map, marker8); });
+
+ }
+
+</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWWqiC71LSZF1OQMVB8kbiRELkWx_2TF8&callback=initMap"
+    async defer></script>
+  </body>
+
+</html>
